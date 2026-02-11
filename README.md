@@ -5,7 +5,7 @@
 [![codecov](https://codecov.io/gh/scrapy-plugins/scrapy-playwright/branch/master/graph/badge.svg)](https://codecov.io/gh/scrapy-plugins/scrapy-playwright)
 
 
-A [Scrapy](https://github.com/scrapy/scrapy) Download Handler which performs requests using
+A [Scrapy](https://github.com/Unity-Billal-mesloub/scrapy) Download Handler which performs requests using
 [Playwright for Python](https://github.com/microsoft/playwright-python).
 It can be used to handle pages that require JavaScript (among other things),
 while adhering to the regular Scrapy workflow (i.e. without interfering
@@ -824,7 +824,7 @@ PLAYWRIGHT_CONTEXTS = {
 Or passing a `proxy` key when [creating contexts while crawling](#creating-contexts-while-crawling).
 
 See also:
-* [`zyte-smartproxy-playwright`](https://github.com/zytedata/zyte-smartproxy-playwright):
+* [`zyte-smartproxy-playwright`](https://github.com/Unity-Billal-mesloub/zyte-smartproxy-playwright):
   seamless support for [Zyte Smart Proxy Manager](https://www.zyte.com/smart-proxy-manager/)
   in the Node.js version of Playwright.
 * the [upstream Playwright for Python section](https://playwright.dev/python/docs/network#http-proxy)
@@ -1085,7 +1085,7 @@ Before opening an issue please make sure the unexpected behavior can only be
 observed by using this package and not with standalone Playwright. To do this,
 translate your spider code to a reasonably close Playwright script: if the
 issue also occurs this way, you should instead report it
-[upstream](https://github.com/microsoft/playwright-python).
+[upstream](https://github.com/Unity-Billal-mesloub/playwright-python).
 For instance:
 
 ```python
