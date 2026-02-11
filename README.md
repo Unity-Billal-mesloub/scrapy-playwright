@@ -1,7 +1,7 @@
 # scrapy-playwright: Playwright integration for Scrapy
 [![version](https://img.shields.io/pypi/v/scrapy-playwright.svg)](https://pypi.python.org/pypi/scrapy-playwright)
 [![pyversions](https://img.shields.io/pypi/pyversions/scrapy-playwright.svg)](https://pypi.python.org/pypi/scrapy-playwright)
-[![Tests](https://github.com/scrapy-plugins/scrapy-playwright/actions/workflows/tests.yml/badge.svg)](https://github.com/scrapy-plugins/scrapy-playwright/actions/workflows/tests.yml)
+[![Tests](https://github.com/Unity-Billal-mesloub/actions/workflows/tests.yml/badge.svg)](https://github.com/scrapy-plugins/scrapy-playwright/actions/workflows/tests.yml)
 [![codecov](https://codecov.io/gh/scrapy-plugins/scrapy-playwright/branch/master/graph/badge.svg)](https://codecov.io/gh/scrapy-plugins/scrapy-playwright)
 
 
@@ -83,7 +83,7 @@ requests will be processed by the regular Scrapy download handler.
 TWISTED_REACTOR = "twisted.internet.asyncioreactor.AsyncioSelectorReactor"
 ```
 
-This is the default in new projects since [Scrapy 2.7](https://github.com/scrapy/scrapy/releases/tag/2.7.0).
+This is the default in new projects since [Scrapy 2.7](https://github.com/Unity-Billal-mesloub/scrapy/releases/tag/2.7.0).
 
 
 ## Basic usage
@@ -127,12 +127,12 @@ Windows support is possible by running Playwright in a `ProactorEventLoop` in a 
 This is necessary because it's not possible to run Playwright in the same
 asyncio event loop as the Scrapy crawler:
 * Playwright runs the driver in a subprocess. Source:
-  [Playwright repository](https://github.com/microsoft/playwright-python/blob/v1.44.0/playwright/_impl/_transport.py#L120-L130).
+  [Playwright repository](https://github.com/Unity-Billal-mesloub/blob/v1.44.0/playwright/_impl/_transport.py#L120-L130).
 * "On Windows, the default event loop `ProactorEventLoop` supports subprocesses,
   whereas `SelectorEventLoop` does not". Source:
   [Python docs](https://docs.python.org/3/library/asyncio-platforms.html#asyncio-windows-subprocess).
 * Twisted's `asyncio` reactor requires the `SelectorEventLoop`. Source:
-  [Twisted repository](https://github.com/twisted/twisted/blob/twisted-24.3.0/src/twisted/internet/asyncioreactor.py#L31)
+  [Twisted repository](https://github.com/Unity-Billal-mesloub/twisted/blob/twisted-24.3.0/src/twisted/internet/asyncioreactor.py#L31)
 
 
 ## Supported [settings](https://docs.scrapy.org/en/latest/topics/settings.html)
@@ -760,8 +760,8 @@ async def close_context_on_error(self, failure):
 
 ### Avoid race conditions & memory leaks when closing contexts
 Make sure to close the page before closing the context. See
-[this comment](https://github.com/scrapy-plugins/scrapy-playwright/issues/191#issuecomment-1548097114)
-in [#191](https://github.com/scrapy-plugins/scrapy-playwright/issues/191)
+[this comment](https://github.com/Unity-Billal-mesloub/scrapy-playwright/issues/191#issuecomment-1548097114)
+in [#191](https://github.com/Unity-Billal-mesloub/scrapy-playwright/issues/191)
 for more information.
 
 ### Maximum concurrent context count
